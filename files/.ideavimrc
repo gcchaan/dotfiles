@@ -1,0 +1,31 @@
+" https://github.com/JetBrains/ideavim/wiki/IdeaVim-Plugins
+
+set autoindent
+set hlsearch
+set visualbell
+set noerrorbells
+
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'machakann/vim-highlightedyank'
+Plug 'chrisbra/matchit'
+set quickscope
+set keep-english-in-normal
+
+noremap j gj
+noremap k gk
+noremap <S-h>   ^
+noremap <S-j>   }
+noremap <S-k>   {
+noremap <S-l>   $
+
+nnoremap x "_x
+nnoremap s "_s
+
+imap {} {}<Left>
+imap [] []<Left>
+imap "" ""<Left>
+imap '' ''<Left>
+imap <> <><Left>
+
+nnoremap <leader><leader> :source ~/.ideavimrc<cr>
