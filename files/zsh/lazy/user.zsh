@@ -7,13 +7,37 @@ bindkey '^[OA' select_history
 bindkey '^r' select_history
 
 function _select_repos() {
-    FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS} --reverse --height=50%"
-    local root="$(ghq root)"
-    local repo=$(ghq list | fzf --preview "ghq list --full-path --exact {} | xargs exa -h --long --icons --classify --git --no-permissions --no-user --no-filesize --git-ignore --sort modified --reverse --tree --level 2")
-    local dir="${root}/${repo}"
-    [ -n "${dir}" ] && cd "${dir}"
-    zle accept-line
-    zle reset-prompt
+  local project root dir repository session current_session
+  root="$(ghq root)"
+  project=$(ghq list | fzf --prompt='Project >')
+
+  if [[ $project == "" ]]; then
+    return 1
+  elif [[ -d "${root}/${project}" ]]; then
+    dir="${root}/${project}"
+  elif [[ -d "~/.go/src/${project}" ]]; then
+    dir="~/.go/src/${project}"
+  fi
+
+  if [[ ! -z ${TMUX} ]]; then
+    repository=${dir##*/}
+    session=${repository//./-}
+    current_session=$(tmux list-sessions | grep 'attached' | cut -d":" -f1)
+
+    if [[ $current_session =~ ^[0-9]+$ ]]; then
+      cd $dir
+      tmux rename-session $session
+    else
+      tmux list-sessions | cut -d":" -f1 | grep -e "^$session\$" > /dev/null
+      if [[ $? != 0 ]]; then
+        tmux new-session -d -c $dir -s $session
+      fi
+      tmux switch-client -t $session
+    fi
+  else
+    cd $dir
+  fi
+  zle reset-prompt
 }
 zle -N _select_repos
 bindkey "^g^g" _select_repos

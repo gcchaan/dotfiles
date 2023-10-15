@@ -12,6 +12,7 @@ path=(
   "$HOME/.local/bin"(N-/)
   "$CARGO_HOME/bin"(N-/)
   "$GOPATH/bin"(N-/)
+  "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"(N-/)
   "/usr/local/bin"
   "/opt/homebrew/bin"
   "$path[@]"
@@ -24,6 +25,9 @@ export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 
 {
+  # tmuxのprefix
+  bindkey -r '^S'
+  # bindkey -v だと autosuggestionsやabbrと相性がよくないみたい
   bindkey -e
   export EDITOR='nvim'
   alias nano='nvim'
