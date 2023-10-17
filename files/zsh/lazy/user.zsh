@@ -83,3 +83,10 @@ alias slforever='while :;do sl;done'
 alias ghql='cd $(ghq list --p|fzf) && basename `pwd` | xargs tmux rename-window'
 
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+
+function _mcmenu() {
+    BUFFER="sh ~/repos/digmee/mico-cloud-tools/menu.sh"
+    zle accept-line
+}
+zle -N _mcmenu
+bindkey "^g^m" _mcmenu

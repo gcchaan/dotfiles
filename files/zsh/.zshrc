@@ -10,9 +10,12 @@ path=(
 path=(
   "$HOME/bin"
   "$HOME/.local/bin"(N-/)
+  "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"(N-/)
   "$CARGO_HOME/bin"(N-/)
   "$GOPATH/bin"(N-/)
-  "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"(N-/)
+  "$VOLTA_HOME/bin"(N-/)
+  "/opt/homebrew/opt/php@7.3/bin"(N-/)
+  "/opt/homebrew/opt/php@7.3/sbin"(N-/)
   "/usr/local/bin"
   "/opt/homebrew/bin"
   "$path[@]"
@@ -31,7 +34,7 @@ export LC_CTYPE=en_US.UTF-8
   bindkey -e
   export EDITOR='nvim'
   alias nano='nvim'
-  alias vim'nvim'
+  alias vim='nvim'
   export LESS='-R -X'
 
   setopt correct
