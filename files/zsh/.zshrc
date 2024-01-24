@@ -9,6 +9,7 @@ path=(
 
 path=(
   "$HOME/bin"
+  "$HOME/bin/google-cloud-sdk/bin"(N-/)
   "$HOME/.local/bin"(N-/)
   "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"(N-/)
   "$CARGO_HOME/bin"(N-/)
