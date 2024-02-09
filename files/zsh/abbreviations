@@ -4,7 +4,7 @@ abbr d="docker"
 abbr de="docker exec -it $(docker ps | peco | cut -d ' ' -f 1) /bin/bash"
 
 abbr dc="docker compose"
-abbr dce="docker compose exec -it /bin/bash "
+abbr dce="docker compose exec -it"
 abbr dcd="docker compose down"
 abbr dcl="docker compose logs"
 abbr dcp="docker compose ps"
