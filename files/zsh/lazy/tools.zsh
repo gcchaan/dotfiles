@@ -24,12 +24,12 @@ esac
 # [Homebrew]direnv
 eval "$(direnv hook zsh)"
 
-# [Homebrew]exa
-alias ll='exa -lF'
-alias la='exa -laF'
+# [Homebrew]eza
+alias ll='eza -lF'
+alias la='eza -laF'
 function etree (){
     local DEPTH=${1:-2}
-    exa -TL "${DEPTH}"
+    eza -TL "${DEPTH}"
 }
 
 # [Homebrew]bat
