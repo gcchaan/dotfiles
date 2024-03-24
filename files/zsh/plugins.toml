@@ -41,8 +41,8 @@ local = "~/.config/zsh/lazy"
 use = ["*.zsh"]
 apply = ["defer"]
 
-[plugins.rtx]
-inline = 'eval "$(rtx activate zsh)"'
+[plugins.mise]
+inline = 'eval "$(mise activate zsh)"'
 
 [plugins.starship]
 inline = 'eval "$(starship init zsh)"'
