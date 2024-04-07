@@ -33,6 +33,8 @@ export LC_CTYPE=en_US.UTF-8
   bindkey -r '^S'
   # bindkey -v だと autosuggestionsやabbrと相性がよくないみたい
   bindkey -e
+  bindkey '[D' backward-word
+  bindkey '[C' forward-word
   export EDITOR='nvim'
   alias nano='nvim'
   alias vim='nvim'
