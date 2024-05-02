@@ -15,8 +15,8 @@ path=(
   "$CARGO_HOME/bin"(N-/)
   "$GOPATH/bin"(N-/)
   "$VOLTA_HOME/bin"(N-/)
-  "/opt/homebrew/opt/php@7.3/bin"(N-/)
-  "/opt/homebrew/opt/php@7.3/sbin"(N-/)
+  "/opt/homebrew/opt/php@7.4/bin"(N-/)
+  "/opt/homebrew/opt/php@7.4/sbin"(N-/)
   "/usr/local/bin"
   "/opt/homebrew/bin"
   "$path[@]"
@@ -33,8 +33,6 @@ export LC_CTYPE=en_US.UTF-8
   bindkey -r '^S'
   # bindkey -v だと autosuggestionsやabbrと相性がよくないみたい
   bindkey -e
-  bindkey '[D' backward-word
-  bindkey '[C' forward-word
   export EDITOR='nvim'
   alias nano='nvim'
   alias vim='nvim'
@@ -43,6 +41,8 @@ export LC_CTYPE=en_US.UTF-8
   setopt correct
   setopt no_beep
   setopt nolistbeep
+  # 途中のシャープをコメントアウトとして扱う
+  setopt interactive_comments
 }
 
 # cd
