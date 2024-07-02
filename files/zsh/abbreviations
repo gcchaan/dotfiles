@@ -44,6 +44,9 @@ abbr gsw-="git switch -"
 abbr gswc="git switch -c"
 abbr gu="gitui"
 
+abbr ghce="gh copilot explain ''"
+abbr ghcs="gh copilot suggest ''"
+
 abbr history="history -E"
 abbr ls="ls -GF"
 abbr nr="npm run"
