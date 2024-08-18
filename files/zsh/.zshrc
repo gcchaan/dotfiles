@@ -12,7 +12,7 @@ path=(
   "$HOME/bin/google-cloud-sdk/bin"(N-/)
   "$HOME/.local/bin"(N-/)
   "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"(N-/)
-  "$CARGO_HOME/bin"(N-/)
+  "$HOME/.cargo/bin"(N-/)
   "$GOPATH/bin"(N-/)
   "$VOLTA_HOME/bin"(N-/)
   "/opt/homebrew/opt/php@7.4/bin"(N-/)
