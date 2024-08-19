@@ -19,6 +19,7 @@ path=(
   "/opt/homebrew/opt/php@7.4/sbin"(N-/)
   "/usr/local/bin"
   "/opt/homebrew/bin"
+  "/opt/homebrew/opt/mysql-client/bin"(N-/)
   "$path[@]"
 )
 
