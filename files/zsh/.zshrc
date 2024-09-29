@@ -89,4 +89,9 @@ export LC_CTYPE=en_US.UTF-8
     if type terraform &>/dev/null; then
         complete -o nospace -C /opt/homebrew/bin/terraform terraform
     fi
+
+    # Cargo
+    if [[ ! -L $(brew --prefix)/share/zsh/site-functions/_cargo && -f "$HOME/.rustup/toolchains/stable-aarch64-apple-darwin/share/zsh/site-functions/_cargo" ]]; then
+        ln -s "$HOME/.rustup/toolchains/stable-aarch64-apple-darwin/share/zsh/site-functions/_cargo" "$(brew --prefix)/share/zsh/site-functions/_cargo"
+    fi
 }
