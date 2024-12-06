@@ -1,3 +1,5 @@
+abbr asl="aws sso login --profile"
+
 abbr b="bat"
 
 abbr d="docker"

@@ -25,8 +25,8 @@ esac
 eval "$(direnv hook zsh)"
 
 # [Homebrew]eza
-alias ll='eza -lF'
-alias la='eza -laF'
+alias ll='eza -l'
+alias la='eza -la'
 function etree (){
     local DEPTH=${1:-2}
     eza -TL "${DEPTH}"
