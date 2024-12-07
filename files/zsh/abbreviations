@@ -2,6 +2,13 @@ abbr asl="aws sso login --profile"
 
 abbr b="bat"
 
+abbr c="cargo"
+abbr cc="cargo clippy"
+abbr cf="cargo fmt"
+abbr cr="cargo run --quiet"
+abbr ct="cargo test"
+abbr cv="cargo --version"
+
 abbr d="docker"
 abbr de="docker exec -it $(docker ps | peco | cut -d ' ' -f 1) /bin/bash"
 
@@ -53,7 +60,12 @@ abbr ghcs="gh copilot suggest ''"
 
 abbr history="history -E"
 abbr ls="ls -GF"
+
 abbr nr="npm run"
+abbr nrb="npm run build"
+abbr nrd="npm run dev"
+abbr nrt="npm run test"
+abbr nrs="npm run start"
 
 abbr t="terraform"
 abbr ti="terraform init"
