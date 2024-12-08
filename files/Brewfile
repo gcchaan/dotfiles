@@ -55,7 +55,6 @@ cask "google-japanese-ime"
 cask "imageoptim"
 cask "jetbrains-toolbox"
 cask "karabiner-elements"
-cask "kindle"
 cask "logi-options-plus"
 cask "microsoft-auto-update"
 cask "microsoft-excel"
@@ -72,6 +71,7 @@ cask "zoom"
 tap "homebrew/cask-fonts"
 cask "font-udev-gothic-nf"
 
+# mas "Kindle", id: 302584613
 # mas "LINE", id: 539883307
 # mas "Tailscale", id: 1475387142
 # mas "TickTick", id: 966085870
