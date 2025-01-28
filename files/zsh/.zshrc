@@ -95,3 +95,7 @@ export LC_CTYPE=en_US.UTF-8
         ln -s "$HOME/.rustup/toolchains/stable-aarch64-apple-darwin/share/zsh/site-functions/_cargo" "$(brew --prefix)/share/zsh/site-functions/_cargo"
     fi
 }
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
