@@ -94,6 +94,18 @@ export LC_CTYPE=en_US.UTF-8
     if [[ ! -L $(brew --prefix)/share/zsh/site-functions/_cargo && -f "$HOME/.rustup/toolchains/stable-aarch64-apple-darwin/share/zsh/site-functions/_cargo" ]]; then
         ln -s "$HOME/.rustup/toolchains/stable-aarch64-apple-darwin/share/zsh/site-functions/_cargo" "$(brew --prefix)/share/zsh/site-functions/_cargo"
     fi
+
+    # uv
+    # https://github.com/astral-sh/uv/issues/8432#issuecomment-2453494736
+    eval "$(uv generate-shell-completion zsh)"
+    _uv_run_mod() {
+        if [[ "$words[2]" == "run" && "$words[CURRENT]" != -* ]]; then
+            _arguments '*:filename:_files'
+        else
+            _uv "$@"
+        fi
+    }
+    compdef _uv_run_mod uv
 }
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!

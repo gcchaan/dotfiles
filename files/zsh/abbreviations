@@ -85,4 +85,8 @@ abbr tss="terraform state show"
 abbr tspl="terraform state pull > backup.tfstate"
 
 abbr tl="tldr"
+
+abbr ui="uv init"
+abbr ur="uv run"
+
 abbr v="nvim"
