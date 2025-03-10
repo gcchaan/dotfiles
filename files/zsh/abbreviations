@@ -1,3 +1,4 @@
+abbr ap="aws --profile"
 abbr asl="aws sso login --profile"
 
 abbr b="bat"
