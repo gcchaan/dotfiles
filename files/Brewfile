@@ -1,4 +1,5 @@
 brew "act"
+brew "asdf"
 brew "bat"
 brew "bitwarden-cli"
 brew "coreutils"

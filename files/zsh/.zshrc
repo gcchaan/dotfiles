@@ -15,6 +15,7 @@ path=(
   "$HOME/.cargo/bin"(N-/)
   "$GOPATH/bin"(N-/)
   "$VOLTA_HOME/bin"(N-/)
+  "${ASDF_DATA_DIR:-$HOME/.asdf}/shims"(N-/)
   "/opt/homebrew/opt/php@7.4/bin"(N-/)
   "/opt/homebrew/opt/php@7.4/sbin"(N-/)
   "/usr/local/bin"
