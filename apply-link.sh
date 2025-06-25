@@ -6,7 +6,7 @@ source ./_lib.sh
 dotfiles_directory="$(cd "$(dirname "$0")"; pwd -P)"
 
 xdg_config_home="$HOME/.config"
-mkdir -p $xdg_config_home/{git,nvim,sheldon,tmux,zsh}
+mkdir -p $xdg_config_home/{git,ghostty,nvim,sheldon,tmux,zsh}
 
 # "source,dest"
 declare -a mappings=(
@@ -21,6 +21,7 @@ declare -a mappings=(
     "files/tmux.conf,${xdg_config_home}/tmux/tmux.conf"
     "files/.ideavimrc,${HOME}/.ideavimrc"
     "files/starship.toml,${xdg_config_home}/starship.toml"
+    "files/ghostty/config,${xdg_config_home}/ghostty/config"
 )
 
 for mapping in "${mappings[@]}"

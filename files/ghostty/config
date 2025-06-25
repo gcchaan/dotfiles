@@ -1,0 +1,16 @@
+font-family = UDEV Gothic NF
+font-feature = -dlig
+font-size = 24
+
+font-thicken = true
+font-thicken-strength = 1
+
+# ghostty +list-themes
+# reload: cmd+shift+,
+theme = tokyonight
+
+unfocused-split-opacity = 0.80
+
+mouse-hide-while-typing = true
+
+scrollback-limit = 1000000
