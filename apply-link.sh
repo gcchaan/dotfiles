@@ -10,7 +10,7 @@ mkdir -p $xdg_config_home/{git,ghostty,nvim,sheldon,tmux,zsh}
 
 # "source,dest"
 declare -a mappings=(
-    "files/nvim/init.vim,${xdg_config_home}/nvim/init.vim"
+    "files/nvim/init.lua,${xdg_config_home}/nvim/init.lua"
     "files/zsh/.zshenv,${HOME}/.zshenv"
     "files/zsh/.zshrc,${xdg_config_home}/zsh/.zshrc"
     "files/zsh/abbreviations,${xdg_config_home}/zsh/abbreviations"
