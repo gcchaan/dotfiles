@@ -1,3 +1,5 @@
+set number
+
 " タブ補完
 set ignorecase
 set smartcase
@@ -14,8 +16,16 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.3' }
 " TODO:
 " Plug 'williamboman/mason.nvim'
 call plug#end()
+
+let mapleader = " "
+
 nnoremap <C-1> :NERDTreeToggle<CR>
+nnoremap <Leader>e :NERDTreeToggle<CR>
 nnoremap <C-p> <cmd>Telescope find_files<cr>
+nnoremap <Leader>ff <cmd>Telescope find_files<cr>
+nnoremap <Leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <Leader>fb <cmd>Telescope buffers<cr>
+nnoremap <Leader>gg <cmd>Telescope buffers<cr>
 
 noremap j gj
 noremap k gk
