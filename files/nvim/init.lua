@@ -8,32 +8,68 @@ vim.g.maplocalleader = ' '
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable",
-    lazypath,
-  })
+    vim.fn.system({
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "https://github.com/folke/lazy.nvim.git",
+        "--branch=stable",
+        lazypath,
+    })
 end
 vim.opt.rtp:prepend(lazypath)
 
 
 require("lazy").setup({
-  {
-    'nvim-telescope/telescope.nvim',
-    version = '0.1.3',
-    dependencies = { 'nvim-lua/plenary.nvim' }
-  },
+    {
+        'nvim-telescope/telescope.nvim',
+        version = '0.1.3',
+        dependencies = { 'nvim-lua/plenary.nvim' },
+        config = function()
+            require('telescope').setup {
+                defaults = {
+                    file_ignore_patterns = { '.git/', '.venv/', 'node_modules/', },
+                }
+            }
+        end
+    },
 
-  { 'williamboman/mason.nvim', build = ':MasonUpdate', opts = {}, },
+    { 'williamboman/mason.nvim', build = ':MasonUpdate', opts = {}, },
 
-  { 'preservim/nerdtree', cmd = 'NERDTreeToggle' },
+    { 'preservim/nerdtree',      cmd = 'NERDTreeToggle' },
+    {
+        'nvim-treesitter/nvim-treesitter',
+        build = ':TSUpdate',
+        branch = 'master',
+        lazy = false,
+        config = function()
+            require 'nvim-treesitter.configs'.setup {
+                sync_install = false,
+                highlight = { enable = true },
+                indent = { enable = true },
+                ensure_installed = {
+                    'c', 'lua', 'vim', 'vimdoc',
+                    'typescript', 'tsx',
+                    'python', 'go', 'rust', 'php',
+                    'html', 'css', 'json', 'yaml', 'markdown',
+                    'bash',
+                },
+                incremental_selection = {
+                    enable = true,
+                    keymaps = {
+                        init_selection = '<A-Up>',
+                        node_incremental = '<A-Up>',
+                        node_decremental = '<A-Down>',
+                        scope_incremental = '<A-Right>',
+                    },
+                },
+            }
+        end
+    },
 
-  { 'tpope/vim-surround', event = 'VeryLazy' },
-  { 'machakann/vim-highlightedyank', event = 'VeryLazy' },
-  { 'chrisbra/matchit', event = 'VeryLazy' },
+    { 'tpope/vim-surround',            event = 'VeryLazy' },
+    { 'machakann/vim-highlightedyank', event = 'VeryLazy' },
+    { 'chrisbra/matchit',              event = 'VeryLazy' },
 
 })
 
@@ -50,8 +86,8 @@ keymap('n', '<Leader>fg', '<cmd>Telescope live_grep<cr>', opts)
 keymap('n', '<Leader>fb', '<cmd>Telescope buffers<cr>', opts)
 keymap('n', '<Leader>gg', '<cmd>Telescope buffers<cr>', opts)
 
-keymap({'n', 'v'}, 'j', 'gj', { noremap = true })
-keymap({'n', 'v'}, 'k', 'gk', { noremap = true })
+keymap({ 'n', 'v' }, 'j', 'gj', { noremap = true })
+keymap({ 'n', 'v' }, 'k', 'gk', { noremap = true })
 keymap('n', '<S-h>', '^', opts)
 keymap('n', '<S-l>', '$', opts)
 keymap('n', '<S-j>', '}', opts)
