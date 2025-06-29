@@ -41,3 +41,11 @@ do
     fi
 done
 IFS=
+
+# dir
+if [ -L ${xdg_config_home}/nvim/lua ] ;then
+    echo "ok: nvim/lua"
+else
+    echo "create: nvim/lua"
+    ln -s  "${dotfiles_directory}/files/nvim/lua" ${xdg_config_home}/nvim
+fi

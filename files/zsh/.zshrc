@@ -13,6 +13,7 @@ path=(
   "$HOME/.local/bin"(N-/)
   "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"(N-/)
   "$HOME/.cargo/bin"(N-/)
+  "$HOME/.local/share/cargo/bin"(N-/)
   "$GOPATH/bin"(N-/)
   "$VOLTA_HOME/bin"(N-/)
   "${ASDF_DATA_DIR:-$HOME/.asdf}/shims"(N-/)
