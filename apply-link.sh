@@ -6,11 +6,12 @@ source ./_lib.sh
 dotfiles_directory="$(cd "$(dirname "$0")"; pwd -P)"
 
 xdg_config_home="$HOME/.config"
-mkdir -p $xdg_config_home/{git,ghostty,nvim,sheldon,tmux,zsh}
+mkdir -p $xdg_config_home/{git,ghostty,lazygit,nvim,sheldon,tmux,zsh}
 
 # "source,dest"
 declare -a mappings=(
     "files/nvim/init.lua,${xdg_config_home}/nvim/init.lua"
+    "files/lazygit/config.yml,${xdg_config_home}/lazygit/config.yml"
     "files/zsh/.zshenv,${HOME}/.zshenv"
     "files/zsh/.zshrc,${xdg_config_home}/zsh/.zshrc"
     "files/zsh/abbreviations,${xdg_config_home}/zsh/abbreviations"
