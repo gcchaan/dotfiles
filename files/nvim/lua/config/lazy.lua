@@ -28,6 +28,7 @@ require("lazy").setup({
         { "LazyVim/LazyVim", import = "lazyvim.plugins.extras.lang.sql" },
         { "LazyVim/LazyVim", import = "lazyvim.plugins.extras.lang.terraform" },
         { "LazyVim/LazyVim", import = "lazyvim.plugins.extras.lang.typescript" },
+        { "LazyVim/LazyVim", import = "lazyvim.plugins.extras.test.core" },
         { import = "plugins" },
     },
     defaults = {
