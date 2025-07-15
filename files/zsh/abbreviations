@@ -60,6 +60,7 @@ abbr ghce="gh copilot explain ''"
 abbr ghcs="gh copilot suggest ''"
 
 abbr history="history -E"
+abbr ld="lazydocker"
 abbr lg="lazygit"
 abbr ls="ls -GF"
 
