@@ -3,6 +3,12 @@ return {
   opts = {
     picker = {
       hidden = true,
+      previewers = {
+        diff = {
+          builtin = false,
+          cmd = { "delta", "--no-gitconfig", "--line-numbers" },
+        },
+      },
     },
   },
 }
