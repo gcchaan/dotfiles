@@ -29,6 +29,7 @@ require("lazy").setup({
         { "LazyVim/LazyVim", import = "lazyvim.plugins.extras.lang.terraform" },
         { "LazyVim/LazyVim", import = "lazyvim.plugins.extras.lang.typescript" },
         { "LazyVim/LazyVim", import = "lazyvim.plugins.extras.test.core" },
+        { "LazyVim/LazyVim", import = "lazyvim.plugins.extras.ui.treesitter-context" },
         { import = "plugins" },
     },
     defaults = {
