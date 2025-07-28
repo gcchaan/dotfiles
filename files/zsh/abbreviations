@@ -72,6 +72,8 @@ abbr nrs="npm run start"
 
 abbr t="tmux"
 abbr ta="tmux attach"
+abbr tn="tmux new"
+abbr tnd="tmux new -d"
 
 abbr tf="terraform"
 abbr tfi="terraform init"
