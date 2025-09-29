@@ -24,3 +24,12 @@ if vim.fn.executable("lazydocker") == 1 then
     Snacks.terminal("lazydocker", { esc_esc = false, ctrl_hjkl = false })
   end, { desc = "Lazydocker" })
 end
+
+vim.keymap.set({"n", "x", "o"}, "<A-Up>", function()
+  require("flash").treesitter({
+    actions = {
+      ["<A-Up>"] = "next",
+      ["<A-Down>"] = "prev"
+    }
+  })
+end, { desc = "Treesitter incremental selection" })

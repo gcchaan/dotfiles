@@ -1,39 +1,40 @@
 return {
-    'nvim-treesitter/nvim-treesitter',
-    opts = {
-        ensure_installed = {
-            -- languages
-            'bash',
-            'c',
-            'go',
-            'lua',
-            'php',
-            'python',
-            'rust',
-            'tsx',
-            'typescript',
-            -- documents
-            'css',
-            'scss',
-            'diff',
-            'dockerfile',
-            'html',
-            'json',
-            'toml',
-            'yaml',
-            'markdown',
-        },
-        incremental_selection = {
-            enable = true,
-            keymaps = {
-                init_selection = '<A-Up>',
-                node_incremental = '<A-Up>',
-                node_decremental = '<A-Down>',
-                scope_incremental = '<A-Right>',
-            },
-        },
+  "nvim-treesitter/nvim-treesitter",
+  opts = {
+    ensure_installed = {
+      -- lazyvim defaults
+      "bash",
+      "c",
+      "diff",
+      "html",
+      "javascript",
+      "jsdoc",
+      "json",
+      "jsonc",
+      "lua",
+      "luadoc",
+      "luap",
+      "markdown",
+      "markdown_inline",
+      "printf",
+      "python",
+      "query",
+      "regex",
+      "toml",
+      "tsx",
+      "typescript",
+      "vim",
+      "vimdoc",
+      "xml",
+      "yaml",
+      -- languages
+      "go",
+      "php",
+      "rust",
+      -- documents
+      "css",
+      "scss",
+      "dockerfile",
     },
-    config = function(_, opts)
-        require 'nvim-treesitter.configs'.setup(opts)
-    end
+  },
 }
