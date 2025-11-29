@@ -52,11 +52,21 @@ root = ~/repos
 
 [alias]
 	logp = log --oneline --decorate=short --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cgreen%h %C(yellow)%cd %Cred%d %Creset%s %Cblue<%cn>'
+
+	# aic = AI Commit
+	aic = "!f() { if git diff --staged --quiet; then echo 'No staged changes.'; return 1; fi; COMMITMSG=$(git diff --staged | claude -p 'Write a commit message for the following git diff with commitizen convention. Keep the title under 50 chars, wrap body at 72 chars. Output ONLY the raw commit message without markdown code blocks or quotes.') || { echo 'Failed to generate commit message.'; return 1; }; if [ -z \"$COMMITMSG\" ]; then echo 'Generated commit message is empty.'; return 1; fi; git commit -m \"$COMMITMSG\" -e; }; f"
+
+	# airs = AI Review Staged
+	airs = "!claude '現在ステージングされている変更（git diff --staged）を確認して、レビューしてください'"
+
+	# airc = AI Review Commit
+	airc = "!f() { git show \"${1:-HEAD}\" | claude -p '渡されたコミット内容をレビューしてください。'; }; f"
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+
 [init]
 	defaultBranch = main
