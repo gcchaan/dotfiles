@@ -1,0 +1,15 @@
+brew "mas"
+brew "volta"
+cask "adobe-acrobat-reader"
+cask "claude"
+cask "claude-code"
+cask "discord"
+cask "google-chrome"
+cask "slack"
+
+# mas "Kindle", id: 302584613
+# mas "LINE", id: 539883307
+# mas "Tailscale", id: 1475387142
+# mas "TickTick", id: 966085870
+# mas "Xcode", id: 497799835
+# mas "Developer", id: 640199958

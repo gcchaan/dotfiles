@@ -1,0 +1,5 @@
+brew "asdf"
+cask "caffeine"
+# tap "cloudflare/cloudflare"
+# brew "cloudflare/cloudflare/cloudflared"
+cask "zoom"

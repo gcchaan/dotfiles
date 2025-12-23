@@ -40,6 +40,3 @@ github = "olets/zsh-abbr"
 local = "~/.config/zsh/lazy"
 use = ["*.zsh"]
 apply = ["defer"]
-
-[plugins.starship]
-inline = 'eval "$(starship init zsh)"'
