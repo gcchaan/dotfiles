@@ -21,6 +21,7 @@ declare -a mappings=(
     "files/.gitignore_global,${xdg_config_home}/git/ignore"
     "files/tmux.conf,${xdg_config_home}/tmux/tmux.conf"
     "files/.ideavimrc,${HOME}/.ideavimrc"
+    "files/starship.toml,${xdg_config_home}/starship.toml"
     "files/ghostty/config,${xdg_config_home}/ghostty/config"
 )
 
