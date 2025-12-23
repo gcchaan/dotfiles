@@ -54,3 +54,5 @@ export TFENV_ARCH=amd64
 if [ -f '/Users/mba2022/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/mba2022/bin/google-cloud-sdk/path.zsh.inc'; fi
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/mba2022/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/mba2022/bin/google-cloud-sdk/completion.zsh.inc'; fi
+
+alias pstorm='phpstorm'
