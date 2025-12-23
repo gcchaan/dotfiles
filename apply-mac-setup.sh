@@ -45,6 +45,9 @@ defaults write com.apple.finder ShowPathbar -bool true
 # ステータスバーを表示（下部に空き容量などを表示）
 defaults write com.apple.finder ShowStatusBar -bool true
 
+# タイトルバーはフルパスを表示
+defaults write com.apple.finder _FXShowPosixPathInTitle -boolean true
+
 # 検索時は「現在のフォルダ」をデフォルトにする
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
@@ -56,6 +59,12 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
 
 # サイドバーの「最近使ったタグ」を非表示にする
 defaults write com.apple.finder ShowRecentTags -bool false
+
+# 拡張子変更時の警告ダイアログを非表示にする
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# 新しいFinderウィンドウでホームディレクトリを開く
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
 
 
 ###############################################################################
@@ -92,10 +101,9 @@ else
     sudo nvram StartupMute=%01
 fi
 
-# 「Spotlight検索を表示」を無効化
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 64 "{enabled = 0; value = { parameters = (32, 49, 1048576); type = 'standard'; }; }"
-# 「Finderの検索ウィンドウを表示」を無効化
-defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 65 "{enabled = 0; value = { parameters = (32, 49, 1572864); type = 'standard'; }; }"
+# ズーム機能のキーボードショートカットを使って拡大縮小
+# ※ 「プライバシーとセキュリティ」>「フルディスクアクセス」> ターミナルアプリを登録が必要
+defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 
 ###############################################################################
 # アプリ設定
@@ -156,6 +164,8 @@ defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write com.apple.AppleMultitouchTrackpad ForceSuppressed -bool true
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad ForceSuppressed -bool true
 
+# 「通知センターを表示」を無効
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.twoFingerFromRightEdgeSwipeGesture -int 0
 
 ###############################################################################
 # ネットワーク共有設定
@@ -177,3 +187,10 @@ done
 
 echo "--- 設定完了しました ---"
 echo "これらの変更を完全に適用するには、一度ログアウトするかMacを再起動してください。"
+
+
+### 手動設定
+# 「静音」クリック
+# 「スマートズーム」無効
+# 「回転」無効
+# spotlightショートカットキー無効
