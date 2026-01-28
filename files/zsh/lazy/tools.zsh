@@ -47,9 +47,6 @@ eval "$(zoxide init zsh)"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
-# [Homebrew]tfenv / tenv
-export TFENV_ARCH=amd64
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/mba2022/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/mba2022/bin/google-cloud-sdk/path.zsh.inc'; fi
 # The next line enables shell command completion for gcloud.
