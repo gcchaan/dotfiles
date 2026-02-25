@@ -16,7 +16,6 @@ path=(
   "$HOME/.local/share/cargo/bin"(N-/)
   "$GOPATH/bin"(N-/)
   "$VOLTA_HOME/bin"(N-/)
-  "${ASDF_DATA_DIR:-$HOME/.asdf}/shims"(N-/)
   "/opt/homebrew/opt/php@7.4/bin"(N-/)
   "/opt/homebrew/opt/php@7.4/sbin"(N-/)
   "/usr/local/bin"
@@ -109,6 +108,9 @@ export LC_CTYPE=en_US.UTF-8
     }
     compdef _uv_run_mod uv
 }
+
+## mise
+eval "$(mise activate zsh)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

@@ -69,6 +69,10 @@ function cdgitroot(){
     cd "$(git rev-parse --show-superproject-working-tree --show-toplevel | head -n1)"
 }
 
+function nig(){
+    grep -v '^#' $MISE_NODE_DEFAULT_PACKAGES_FILE | xargs npm install -g
+}
+
 function zsh_stats() {
     fc -l 1 \
         | awk '{ CMD[$2]++; count++; } END { for (a in CMD) print CMD[a] " " CMD[a]*100/count "% " a }' \

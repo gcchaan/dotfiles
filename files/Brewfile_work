@@ -1,4 +1,5 @@
-brew "asdf"
+brew "mise"
+brew "copilot-cli"
 cask "caffeine"
 # tap "cloudflare/cloudflare"
 # brew "cloudflare/cloudflare/cloudflared"
