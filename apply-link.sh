@@ -13,7 +13,7 @@ declare -a mappings=(
     "files/.copilot/lsp-config.json,${xdg_config_home}/.copilot/lsp-config.json"
     "files/nvim/init.lua,${xdg_config_home}/nvim/init.lua"
     "files/lazygit/config.yml,${xdg_config_home}/lazygit/config.yml"
-    "files/zsh/.zshenv,${xdg_config_home}/zsh/.zshenv"
+    "files/zsh/.zshenv,${HOME}/.zshenv"
     "files/zsh/.zshrc,${xdg_config_home}/zsh/.zshrc"
     "files/zsh/abbreviations,${xdg_config_home}/zsh/abbreviations"
     "files/zsh/lazy,${xdg_config_home}/zsh/lazy"
