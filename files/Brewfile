@@ -29,6 +29,8 @@ brew "tree-sitter"
 brew "tree-sitter-cli"
 brew "uv"
 brew "wget"
+brew "zig"
+brew "zls"
 brew "zoxide"
 
 cask "bitwarden"
