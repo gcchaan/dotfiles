@@ -33,3 +33,17 @@ vim.keymap.set({"n", "x", "o"}, "<A-Up>", function()
     }
   })
 end, { desc = "Treesitter incremental selection" })
+
+-- true/false 切り替え
+vim.keymap.set("n", "<leader>ct", function()
+  local word = vim.fn.expand("<cword>")
+  if word == "true" then
+    vim.cmd("normal! ciwfalse")
+  elseif word == "false" then
+    vim.cmd("normal! ciwtrue")
+  elseif word == "True" then
+    vim.cmd("normal! ciwFalse")
+  elseif word == "False" then
+    vim.cmd("normal! ciwTrue")
+  end
+end, { desc = "Toggle Boolean" })
