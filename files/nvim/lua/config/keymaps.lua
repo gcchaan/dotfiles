@@ -8,7 +8,6 @@ vim.keymap.set("n", "<S-j>", "}", opts)
 vim.keymap.set("n", "<S-k>", "{", opts)
 
 vim.keymap.set("n", "x", '"_x', opts)
-vim.keymap.set("n", "s", '"_s', { noremap = true })
 
 vim.keymap.set("i", "{}", "{}<Left>", opts)
 vim.keymap.set("i", "[]", "[]<Left>", opts)
