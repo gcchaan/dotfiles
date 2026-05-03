@@ -54,3 +54,7 @@ vim.keymap.set("v", "<C-r>", [["hy:%s/<C-r>h//gc<left><left><left>]], { desc = "
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "選択行を下に移動" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "選択行を上に移動" })
 
+-- コメントアウトを継続させずに改行
+vim.keymap.set("n", "<leader>o", "o<Esc>0\"_D", { desc = "クリーンな改行（下）" })
+vim.keymap.set("n", "<leader>O", "O<Esc>0\"_D", { desc = "クリーンな改行（上）" })
+
