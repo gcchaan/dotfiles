@@ -46,3 +46,7 @@ vim.keymap.set("n", "<leader>ct", function()
     vim.cmd("normal! ciwTrue")
   end
 end, { desc = "Toggle Boolean" })
+
+-- ビジュアルモードで選択したテキストを置換コマンドに引き継ぐ
+vim.keymap.set("v", "<C-r>", [["hy:%s/<C-r>h//gc<left><left><left>]], { desc = "選択範囲を置換" })
+
