@@ -58,3 +58,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "選択行を上に移動"
 vim.keymap.set("n", "<leader>o", "o<Esc>0\"_D", { desc = "クリーンな改行（下）" })
 vim.keymap.set("n", "<leader>O", "O<Esc>0\"_D", { desc = "クリーンな改行（上）" })
 
+-- 行末にセミコロンを追加
+vim.keymap.set('n', '<leader>;', 'm`A;<Esc>``', { desc = 'Append semicolon at end of line' })
+
