@@ -6,7 +6,7 @@ source ./_lib.sh
 dotfiles_directory="$(cd "$(dirname "$0")"; pwd -P)"
 
 xdg_config_home="$HOME/.config"
-mkdir -p $xdg_config_home/{git,ghostty,lazygit,mise,nvim,sheldon,tmux,zsh,.copilot}
+mkdir -p $xdg_config_home/{git,ghostty,lazygit,mise,nvim,sheldon,tmux,zed,zsh,.copilot}
 
 # "source,dest"
 declare -a mappings=(
@@ -26,6 +26,8 @@ declare -a mappings=(
     "files/ghostty/config,${xdg_config_home}/ghostty/config"
     "files/mise/.default-npm-packages,${xdg_config_home}/mise/.default-npm-packages"
     "files/mise/config.toml,${xdg_config_home}/mise/config.toml"
+    "files/zed/settings.json,${xdg_config_home}/zed/settings.json"
+    "files/zed/keymap.json,${xdg_config_home}/zed/keymap.json"
 )
 
 for mapping in "${mappings[@]}"
