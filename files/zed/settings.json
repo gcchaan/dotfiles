@@ -7,6 +7,13 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "edit_predictions": {
+    "open_ai_compatible_api": {
+      "model": ""
+    },
+    "provider": "copilot"
+  },
+  "format_on_save": "off",
   "vim_mode": true,
   "vim": {
     "highlight_on_yank_duration": 1000,
@@ -21,6 +28,12 @@
     "dock": "left"
   },
   "agent": {
+    "play_sound_when_agent_done": "always",
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o",
+      "enable_thinking": false
+    },
     "dock": "right",
     "favorite_models": [],
     "model_parameters": []
