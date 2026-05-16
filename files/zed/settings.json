@@ -19,13 +19,13 @@
     "highlight_on_yank_duration": 1000,
   },
   "project_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "outline_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "collaboration_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "agent": {
     "play_sound_when_agent_done": "always",
@@ -36,10 +36,10 @@
     },
     "dock": "right",
     "favorite_models": [],
-    "model_parameters": []
+    "model_parameters": [],
   },
   "git_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "ui_font_size": 20,
   "buffer_font_size": 23,
@@ -47,9 +47,17 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "One Dark"
+    "dark": "One Dark",
   },
   "cursor_blink": false,
-  "code_lens": "on"
+  "code_lens": "on",
+  "profiles": {
+    "Presentation": {
+      "settings": {
+        "buffer_font_size": 25,
+        "ui_font_size": 22,
+        "theme": "One Light",
+      },
+    },
+  },
 }
-

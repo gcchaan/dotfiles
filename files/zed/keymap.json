@@ -10,16 +10,17 @@
       "space a a": "agent::ToggleFocus",
       "space a t": "multi_workspace::ToggleWorkspaceSidebar",
       "space d d": "debug_panel::ToggleFocus",
-      "space f f": "project_panel::NewSearchInDirectory",
+      "space f f": "file_finder::Toggle",
       "space f p": [
         "projects::OpenRecent",
         {
-          "create_new_window": false
-        }
+          "create_new_window": false,
+        },
       ],
       "space f r": "file_finder::Toggle",
       "space g g": "git_panel::ToggleFocus",
       "space s s": "project_symbols::Toggle",
+      "space u p": "settings_profile_selector::Toggle",
     },
   },
   {
@@ -52,14 +53,14 @@
         "editor::MoveToBeginningOfLine",
         {
           "stop_at_soft_wraps": true,
-          "stop_at_indent": true
-        }
+          "stop_at_indent": true,
+        },
       ],
       "cmd-right": [
         "editor::MoveToEndOfLine",
         {
-          "stop_at_soft_wraps": true
-        }
+          "stop_at_soft_wraps": true,
+        },
       ],
       "alt-left": "editor::MoveToPreviousWordStart",
       "alt-right": "editor::MoveToNextWordEnd",
@@ -88,33 +89,33 @@
       "space b l": [
         "pane::CloseItemsToTheLeft",
         {
-          "close_pinned": false
-        }
+          "close_pinned": false,
+        },
       ],
       "space b r": [
         "pane::CloseItemsToTheRight",
         {
-          "close_pinned": false
-        }
+          "close_pinned": false,
+        },
       ],
       "space b d": [
         "pane::CloseActiveItem",
         {
-          "close_pinned": false
-        }
+          "close_pinned": false,
+        },
       ],
       "space b o": [
         "pane::CloseOtherItems",
         {
-          "close_pinned": false
-        }
+          "close_pinned": false,
+        },
       ],
       "space b p": "pane::TogglePinTab",
       "space b P": [
         "pane::CloseAllItems",
         {
-          "close_pinned": false
-        }
+          "close_pinned": false,
+        },
       ],
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
@@ -139,22 +140,19 @@
     "context": "Editor && vim_mode == insert",
     "bindings": {
       "cmd-i": "editor::ShowCompletions",
-    }
+    },
   },
   {
     "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
     "bindings": {
       "q": "vim::MiniQuotes",
-      "b": "vim::MiniBrackets"
-    }
+      "b": "vim::MiniBrackets",
+    },
   },
   {
     "context": "vim_operator == c",
     "bindings": {
-      "s": [
-        "vim::PushChangeSurrounds",
-        {}
-      ],
+      "s": ["vim::PushChangeSurrounds", {}],
     },
   },
   {
@@ -166,10 +164,7 @@
   {
     "context": "vim_operator == y",
     "bindings": {
-      "s": [
-        "vim::PushAddSurrounds",
-        {}
-      ],
+      "s": ["vim::PushAddSurrounds", {}],
     },
   },
 ]
