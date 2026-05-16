@@ -28,6 +28,7 @@
     "dock": "left",
   },
   "agent": {
+    "default_profile": "ask",
     "play_sound_when_agent_done": "always",
     "default_model": {
       "provider": "copilot_chat",
