@@ -62,4 +62,9 @@
       },
     },
   },
+  "languages": {
+    "PHP": {
+      "language_servers": ["phpantom_lsp", "!intelephense", "!phpactor", "!phptools", "..."]
+    }
+  }
 }
