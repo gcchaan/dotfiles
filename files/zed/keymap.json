@@ -9,6 +9,7 @@
       "alt-left": "editor::SelectSmallerSyntaxNode",
       "space a a": "agent::ToggleFocus",
       "space a c": "agent::OpenAddContextMenu",
+      "space a i": "assistant::InlineAssist",
       "space a m": "agent::ToggleModelSelector",
       "space a p": "agent::ToggleProfileSelector",
       "space a t": "multi_workspace::ToggleWorkspaceSidebar",
@@ -53,6 +54,12 @@
       "r": "project_panel::Rename",
       "o": "workspace::OpenWithSystem",
     },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-[": "editor::Cancel",
+    }
   },
   {
     "context": "Editor && vim_mode == normal",
@@ -144,6 +151,7 @@
     "bindings": {
       "alt-up": "editor::SelectLargerSyntaxNode",
       "alt-down": "editor::SelectSmallerSyntaxNode",
+      "space a >": "agent::AddSelectionToThread",
     },
   },
   {
