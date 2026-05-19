@@ -44,7 +44,7 @@
     "dock": "left",
   },
   "ui_font_size": 20,
-  "buffer_font_size": 23,
+  "buffer_font_size": 21,
   "buffer_font_family": "UDEV Gothic NF",
   "theme": {
     "mode": "system",
