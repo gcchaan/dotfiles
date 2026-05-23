@@ -5,8 +5,8 @@
       "ctrl-j": "menu::SelectNext",
       "ctrl-k": "menu::SelectPrevious",
       "ctrl-_": "terminal_panel::Toggle",
-      "alt-right": "editor::SelectLargerSyntaxNode",
-      "alt-left": "editor::SelectSmallerSyntaxNode",
+      "alt-left": "editor::MoveToPreviousWordStart",
+      "alt-right": "editor::MoveToNextWordEnd",
       "space a a": "agent::ToggleFocus",
       "space a c": "agent::OpenAddContextMenu",
       "space a i": "assistant::InlineAssist",
@@ -41,7 +41,7 @@
     },
   },
   {
-    "context": "ProjectPanel",
+    "context": "ProjectPanel && not_editing",
     "use_key_equivalents": true,
     "bindings": {
       "a": "project_panel::NewFile",
@@ -59,7 +59,7 @@
     "context": "Editor",
     "bindings": {
       "ctrl-[": "editor::Cancel",
-    }
+    },
   },
   {
     "context": "Editor && vim_mode == normal",
@@ -77,6 +77,8 @@
           "stop_at_soft_wraps": true,
         },
       ],
+      "cmd-alt-left": "pane::GoBack",
+      "cmd-alt-right": "pane::GoForward",
       "alt-left": "editor::MoveToPreviousWordStart",
       "alt-right": "editor::MoveToNextWordEnd",
       "g d": "editor::GoToDefinition",
