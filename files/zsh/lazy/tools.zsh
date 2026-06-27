@@ -41,7 +41,20 @@ alias less='bat'
 alias diff='delta'
 
 # [Homebrew] zoxide
-eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh --no-cmd)"
+z() {
+  __zoxide_z "$@"
+}
+zi() {
+  local target
+  # Combine zoxide history and ghq list, remove duplicates, and pipe to fzf
+  target=$( (zoxide query --list; ghq list -p) | awk '!a[$0]++' | fzf --height 40% --reverse --query="$*")
+
+  # If a directory is selected, cd into it (triggering zoxide's hook)
+  if [[ -n "$target" ]]; then
+    cd "$target"
+  fi
+}
 
 # [Homebrew]volta
 export VOLTA_HOME="$HOME/.volta"
