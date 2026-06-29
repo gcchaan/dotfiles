@@ -4,7 +4,6 @@ function select_history() {
 }
 zle -N select_history
 bindkey '^[OA' select_history
-bindkey '^r' select_history
 
 function _select_repos() {
   local project root dir repository session current_session

@@ -6,7 +6,7 @@ source ./_lib.sh
 dotfiles_directory="$(cd "$(dirname "$0")"; pwd -P)"
 
 xdg_config_home="$HOME/.config"
-mkdir -p $xdg_config_home/{git,ghostty,lazygit,mise,nvim,sheldon,tmux,zed,zsh,.copilot}
+mkdir -p $xdg_config_home/{atuin,git,ghostty,lazygit,mise,nvim,sheldon,tmux,zed,zsh,.copilot}
 
 # "source,dest"
 declare -a mappings=(
@@ -23,6 +23,7 @@ declare -a mappings=(
     "files/tmux.conf,${xdg_config_home}/tmux/tmux.conf"
     "files/.ideavimrc,${HOME}/.ideavimrc"
     "files/starship.toml,${xdg_config_home}/starship.toml"
+    "files/atuin/config.toml,${xdg_config_home}/atuin/config.toml"
     "files/ghostty/config,${xdg_config_home}/ghostty/config"
     "files/mise/.default-npm-packages,${xdg_config_home}/mise/.default-npm-packages"
     "files/mise/config.toml,${xdg_config_home}/mise/config.toml"
@@ -41,6 +42,9 @@ do
         ln -sf  "${dotfiles_directory}/${source}" $dest
     elif [ -f $dest ] ;then
         echo "skip: ${dest}"
+        if [ $source = "files/atuin/config.toml" ] ;then
+            echo "Needed manually run \`ln -sf ${dotfiles_directory}/${source} ${dest}\`"
+        fi
     else
         echo "create: ${dest}"
         ln -s  "${dotfiles_directory}/${source}" $dest

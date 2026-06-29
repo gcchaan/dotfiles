@@ -24,7 +24,9 @@ path=(
   "$path[@]"
 )
 
+# sheldonが先、atuinは後。autosuggestions を自動検知するため
 eval "$(sheldon source)"
+eval "$(atuin init zsh)"
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
