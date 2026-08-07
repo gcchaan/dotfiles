@@ -109,6 +109,11 @@ export LC_CTYPE=en_US.UTF-8
         fi
     }
     compdef _uv_run_mod uv
+
+    # git-wt
+    if (( $+commands[git-wt] )); then
+        eval "$(git wt --init zsh)"
+    fi
 }
 
 ## mise

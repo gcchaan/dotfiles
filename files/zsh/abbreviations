@@ -58,6 +58,7 @@ abbr gsw="git switch"
 abbr gsw-="git switch -"
 abbr gswc="git switch -c"
 abbr gu="gitui"
+abbr gw="git wt"
 
 abbr ghce="gh copilot explain ''"
 abbr ghcs="gh copilot suggest ''"
