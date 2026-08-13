@@ -105,6 +105,10 @@ fi
 # ※ 「プライバシーとセキュリティ」>「フルディスクアクセス」> ターミナルアプリを登録が必要
 defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
 
+sudo mkdir -p /Library/Preferences/FeatureFlags/Domain
+sudo defaults write /Library/Preferences/FeatureFlags/Domain/UIKit.plist \
+  redesigned_text_cursor -dict-add Enabled -bool NO
+
 ###############################################################################
 # アプリ設定
 ###############################################################################
