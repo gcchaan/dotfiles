@@ -25,7 +25,6 @@ declare -a mappings=(
     "files/starship.toml,${xdg_config_home}/starship.toml"
     "files/atuin/config.toml,${xdg_config_home}/atuin/config.toml"
     "files/ghostty/config,${xdg_config_home}/ghostty/config"
-    "files/mise/.default-npm-packages,${xdg_config_home}/mise/.default-npm-packages"
     "files/mise/config.toml,${xdg_config_home}/mise/config.toml"
     "files/zed/settings.json,${xdg_config_home}/zed/settings.json"
     "files/zed/keymap.json,${xdg_config_home}/zed/keymap.json"

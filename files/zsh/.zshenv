@@ -13,9 +13,7 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export RUST_BACKTRACE=1
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
+. "/Users/m363/.local/share/cargo/env"
 
 ## Go
 export GOPATH="$XDG_DATA_HOME/go"
-
-## mise
-export MISE_NODE_DEFAULT_PACKAGES_FILE="$XDG_CONFIG_HOME/mise/.default-npm-packages"
